@@ -1,5 +1,5 @@
 <template>
-  <div class="skill rounded-lg p-6">
+  <div class="skill max-w-sm rounded overflow-hidden shadow-lg">
     <h4 class="text-underline">{{ title }}</h4>
     <p>{{ info }}</p>
     <div v-if="tools" class="tools">
@@ -26,7 +26,6 @@ export default {
 .skill {
   flex-basis: 50%;
   max-width: 50%;
-  border: 1px solid black;
   padding: 0 20px;
   margin: 10px 10px;
 }

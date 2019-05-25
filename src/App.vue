@@ -15,7 +15,7 @@
       <h3>A little about me</h3>
 
       <div class="intro-text flex">
-        <img class="h-56 w-56 rounded-full" alt="Picture of Sammy" src="./assets/sammy.png">
+        <img class="rounded-full" alt="Picture of Sammy" src="./assets/sammy.png">
         <div class="intro-text px-10">
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.

@@ -1,5 +1,5 @@
 <template>
-  <div class="skill">
+  <div class="skill rounded-lg p-6">
     <h4 class="text-underline">{{ title }}</h4>
     <p>{{ info }}</p>
     <div v-if="tools" class="tools">

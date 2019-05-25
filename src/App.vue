@@ -28,9 +28,11 @@
       <Skill title="CSS" 
             info="I started learning CSS..."
             v-bind:tools="['Sass']" />
+
     </div>
 
     <div class="skill-row">
+
       <Skill title="JavaScript" 
             info="I started learning JavaScript..."
             v-bind:tools="['Vue JS', 'jQuery']" />
@@ -38,10 +40,10 @@
       <Skill title="PHP" 
             info="I started learning PHP..."
             v-bind:tools="['Laravel', 'WordPress']" />
+
     </div>
 
     <div class="skill-row">
-
       <Skill title="Server Side" 
             info="I started learning Server Side..."
             v-bind:tools="['AWS', 'Docker', 'Digital Ocean']" />

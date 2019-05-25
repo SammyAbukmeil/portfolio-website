@@ -21,68 +21,42 @@
     <h3>My Skills</h3>
 
     <div class="skill-row">
-      <div class="skill">
-        <h4 class="text-underline">HTML</h4>
-        <p>I started learning HTML...</p>
-      </div>
 
-      <div class="skill">
-        <h4 class="text-underline">CSS</h4>
-        <p>I started learning CSS...</p>
-        <div class="tools">
-          <h5>Tools:</h5>
-          <p>Sass</p>
-        </div>
-      </div>
+      <Skill title="HTML"
+              info="I started learning HTML..."/>
+
+      <Skill title="CSS" 
+            info="I started learning CSS..."
+            v-bind:tools="['Sass']" />
     </div>
 
     <div class="skill-row">
-      <div class="skill">
-        <h4 class="text-underline">JavaScript</h4>
-        <p>I started learning JavaScript...</p>
-        <div class="tools">
-          <h5>Libraries:</h5>
-          <p>Vue JS</p>
-          <p>jQuery</p>
-        </div>
-      </div>
+      <Skill title="JavaScript" 
+            info="I started learning JavaScript..."
+            v-bind:tools="['Vue JS', 'jQuery']" />
 
-      <div class="skill">
-        <h4 class="text-underline">PHP</h4>
-        <p>I started learning PHP...</p>
-        <div class="tools">
-          <h5>Frameworks:</h5>
-          <p>Laravel</p>
-          <p>WordPress</p>
-        </div>
-      </div>
+      <Skill title="PHP" 
+            info="I started learning PHP..."
+            v-bind:tools="['Laravel', 'WordPress']" />
     </div>
 
     <div class="skill-row">
-      <div class="skill">
-        <h4 class="text-underline">Server Side</h4>
-        <p>I started learning JavaScript...</p>
-        <div class="tools">
-          <h5>Frameworks:</h5>
-          <p>Laravel</p>
-          <p>WordPress</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+      <Skill title="Server Side" 
+            info="I started learning Server Side..."
+            v-bind:tools="['AWS', 'Docker', 'Digital Ocean']" />
+    </div>
 
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Skill from './components/Skill.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Skill
   }
 }
 </script>
@@ -113,17 +87,7 @@ export default {
   display: flex;
 }
 
-.skill {
-  flex-basis: 50%;
-  max-width: 50%;
-  border: 1px solid black;
-  padding: 0 20px;
-  margin: 10px 10px;
-}
-
-/*
-  Utility Classes
-*/
+/*** Utility Classes ***/
 
 .text-center {
   text-align: center;

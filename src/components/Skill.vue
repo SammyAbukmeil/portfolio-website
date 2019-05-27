@@ -1,12 +1,16 @@
 <template>
-  <div class="skill w-1/2 rounded shadow-xl m-2">
+  <div class="skill w-full  rounded shadow-xl m-2">
     <div class="p-5">
-      <h4 class="text-underline">{{ title }}</h4>
+      <h4 class="underline">{{ title }}</h4>
       <p>{{ info }}</p>
       <div v-if="tools" class="tools">
-        <h5>Tools:</h5>
-        <div v-for="(tool, index) in tools" :key="index">
-          <p>{{ tool }}</p>
+        <h5 class="mb-2 font-medium">My tools of choice...</h5>
+        <div class="my-10" v-for="(tool, index) in tools" :key="index">
+          <p class="m-0 text-lg font-bold">{{ tool }}</p>
+          <p class="m-0 text-sm">
+            Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit 
+            amet orci. Aenean dignissim pellentesque felis.
+            </p>
         </div>
       </div>
     </div>

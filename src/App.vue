@@ -1,13 +1,18 @@
 <template>
   <div id="app" class="animated fadeIn delay-0.5s">
+
+    <link v-if="this.lightTheme" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+    <link v-else rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+
     <div class="dark-theme-button text-right">
-      <button class="bg-transparent font-semibold p-2 py-3 border outline-none rounded bg-black text-white border-black">
-        Switch To Dark Theme
+      <button @click="switchTheme" v-bind:class="{ 'bg-gray-200': lightTheme, 'border-white border-solid': !lightTheme }" class="font-semibold p-2 py-3 border outline-none focus:outline-none rounded text-white border-black">
+        <span class="dark-title" v-if="this.lightTheme">Switch to Dark Theme</span>
+        <span class="light-title" v-else>Switch to Light Theme</span>
       </button>
     </div>
     <header class="text-center mb-10">
-      <h1 class="text-center">Sammy's Portfolio</h1>
-      <h2 class="text-center">Hello :) My name is Sammy Abukmeil, I'm a fullstack web developer.</h2>
+      <h1 v-bind:class="{ 'dark-title': lightTheme }" class="text-center">Sammy's Portfolio</h1>
+      <h2 v-bind:class="{ 'dark-title': lightTheme }" class="text-center">Hello :) My name is Sammy Abukmeil, I'm a fullstack web developer.</h2>
     </header>
     <div class="intro shadow-xl p-5 pt-1 rounded bg-gray-200">
       <div class="pt-8 sm:flex">
@@ -25,14 +30,11 @@
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
             Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-          </p>
         </div>
       </div>
     </div>
     <div class="skill-section intro shadow-xl p-5 rounded-lg bg-gray-200 mt-10">
-      <h3>My Skills</h3>
+      <h3 class="dark-title">My Skills</h3>
       <div class="skill-row flex flex-wrap">
         <Skill title="HTML"
                 info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
@@ -76,7 +78,7 @@
     </div>
 
     <div class="shadow-xl p-5 rounded-lg bg-gray-200 mt-10">
-      <h3>Projects I've worked on</h3>
+      <h3 v-bind:class="{ 'dark-title': !lightTheme }">Projects I've worked on</h3>
       <div class="skill-row flex flex-wrap  ">
         <Skill title="Matilda"
                 info="Donec nec justo eget felis facilisis fermentum. 
@@ -108,11 +110,29 @@ export default {
   name: 'app',
   components: {
     Skill
+  },
+  data () {
+    return {
+      lightTheme: true
+    }
+  },
+  methods: {
+    switchTheme: function() {
+      if (this.lightTheme) {
+        this.lightTheme = false;
+      } else {
+        this.lightTheme = true;
+      }
+    }
   }
 }
 </script>
 
 <style>
+body {
+  max-width: 900px !important;
+  transition: 250ms linear;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -120,6 +140,20 @@ export default {
   text-align: left;
   color: #2c3e50;
   padding: 10px 30px; 
+  max-width: 900px;
+  margin: auto;
+}
+
+.dark-title {
+  color: #1f2b37;
+}
+
+.light-title {
+  color: #edf2f7;
+}
+
+.dark-bg {
+  background: #202b38;
 }
 
 @media screen and (min-width: 640px) {
@@ -128,9 +162,4 @@ export default {
         max-width: 300px;
       }
 }
-
-.text-underline {
-  text-decoration: underline;
-}
-
 </style>

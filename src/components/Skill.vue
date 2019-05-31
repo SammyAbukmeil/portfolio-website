@@ -1,7 +1,7 @@
 <template>
-  <div class="skill w-full  rounded shadow-xl m-2">
+  <div class="skill w-full rounded shadow-xl m-2">
     <div class="p-5">
-      <h4 class="underline">{{ title }}</h4>
+      <h4 v-bind:class="{ 'light-title': !lightTheme }" class="underline dark-title">{{ title }}</h4>
       <p>{{ info }}</p>
       <div v-if="tools" class="tools">
         <h5 class="mb-2 font-medium">My tools of choice...</h5>
@@ -29,8 +29,10 @@ export default {
 </script>
 
 <style scoped>
-.skill {
-  /* padding: 0 20px;
-  margin: 10px 10px; */
+.light-title {
+  color: #edf2f7;
+}
+.dark-title {
+  color: #1f2b37;
 }
 </style>

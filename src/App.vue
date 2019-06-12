@@ -2,29 +2,35 @@
   <div id="app" class="animated fadeIn delay-0.5s">
     
     <link v-if="this.lightTheme" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
-    <link v-else rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+    <link v-else rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css"> 
 
-    <p class="italic text-xs">add github profile like the button on 
-      <a href="https://vuejs.org/">Vue JS</a>
-    </p>
+    <div class="flex mb-4">
 
-    <div class="dark-theme-button text-right">
-      <button @click="switchTheme" 
-              v-bind:class="{ 'bg-gray-200 border-solid border-black': this.lightTheme, 'border-white border-solid': !lightTheme }" 
-              class="font-semibold p-2 py-3 border outline-none focus:shadow-none rounded text-white border-black">
+      <div class="w-1/2 h-12">
+        <a target="_blank" href="https://github.com/SammyAbukmeil">
+          <img class="h-full" v-if="this.lightTheme" src="./assets/github_logo_black.png" alt="GitHub Logo Black">
+          <img class="h-full" v-else src="./assets/github_logo_white.png" alt="GitHub Logo White">
+        </a>
+      </div>
 
-        <span class="dark-title" v-if="this.lightTheme">
-          Switch to Dark Theme
-        </span>
+      <div class="w-1/2 h-12">
+        <div class="dark-theme-button text-right">
+          <button @click="switchTheme" 
+                  v-bind:class="{ 'bg-gray-200 border-solid border-black': this.lightTheme, 'border-white border-solid': !lightTheme }" 
+                  class="font-semibold p-2 py-3 border outline-none focus:shadow-none rounded text-white border-black">
+            <span class="dark-title" v-if="this.lightTheme">
+              Switch to Dark Theme
+            </span>
+            <span class="light-title" v-else>
+              Switch to Light Theme
+            </span>
+          </button>
+        </div>
+      </div>
 
-        <span class="light-title" v-else>
-          Switch to Light Theme
-        </span>
-
-      </button>
     </div>
     
-    <header class="text-center mb-10">
+    <header class="text-center mb-10 pt-10 sm:pt-0">
       <h1 v-bind:class="{ 'dark-title': lightTheme }" class="text-center">
         Sammy's Portfolio
       </h1>
@@ -48,7 +54,7 @@
           <p class="mt-0">
             I've been coding since 2014 <span class="italic">({{ value }} years)</span>.
             
-            I started learning via <a target="_blank" href="https://www.codecademy.com/">codecademy.com</a> 
+            I started learning through <a target="_blank" href="https://www.codecademy.com/">codecademy.com</a> 
             <span class="italic"> (awesome website)</span>.
             
             I attended a 16 week coding 'bootcamp' 
@@ -68,14 +74,14 @@
             and
 
             <a href="https://www.amazon.co.uk/Linux-Command-Line-Complete-Introduction-ebook/dp/B006X2QEQS/">
-              Linux Command Line
+              Linux Command Line.
             </a>
           </p>
 
           <p>
             This website is built using <a target="_blank" href="https://cli.vuejs.org/">Vue CLI</a>,
             <a target="_blank" href="https://www.netlify.com/">Netlify</a> and 
-            <a target="_blank" href="https://tailwindcss.com/">Tailwind CSS</a>
+            <a target="_blank" href="https://tailwindcss.com/">Tailwind CSS</a>.
           </p>
 
         </div>
@@ -86,7 +92,10 @@
     <div class="skill-section intro shadow-xl p-5 rounded-lg bg-gray-200 mt-10">
       <h3 class="dark-title">My Skills</h3>
 
-      <p class="italic text-xs text-right">Make this a list of buttons OR give a overview of languages and tools to the top right</p>
+      <!-- 
+        To do:
+          Give an overview of all skills at a glance
+      -->
 
       <div class="skill-row flex flex-wrap">
 
@@ -174,7 +183,7 @@
               info="Donec nec justo eget felis facilisis fermentum. 
               Aliquam porttitor mauris sit amet orci. Aenean dignissim 
               pellentesque felis." />
-              
+
       </div>
       
     </div>
@@ -225,6 +234,10 @@ body {
   padding: 10px 30px; 
   max-width: 900px;
   margin: auto;
+}
+
+a {
+  color: #0076d1 !important;
 }
 
 .dark-title {

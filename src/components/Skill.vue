@@ -10,7 +10,7 @@
           <p class="m-0 text-sm">
             Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit 
             amet orci. Aenean dignissim pellentesque felis.
-            </p>
+          </p>
         </div>
       </div>
     </div>
@@ -23,7 +23,8 @@ export default {
   props: {
     title: String,
     info: String,
-    tools: Array
+    tools: Array,
+    lightTheme: ['lightTheme']
   }
 }
 </script>

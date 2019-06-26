@@ -6,3 +6,5 @@
 - [Vue.js](https://vuejs.org/) (via [Vue CLI](https://cli.vuejs.org/))
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Netlify](https://www.netlify.com/)
+- [Travis CI](https://travis-ci.org/)
+- [Coveralls](https://coveralls.io/)

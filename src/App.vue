@@ -130,17 +130,17 @@
 
       <div class="skill-row flex flex-wrap  ">
 
-        <Skill title="Harry Potter" 
-              info="https://www.harrypottertheplay.com/" />
+        <Project title="Harry Potter" 
+                  url="https://www.harrypottertheplay.com/" />
 
-        <Skill title="Matilda"
-                info="http://matildathemusical.com/"/>
+        <Project title="Matilda"
+                  url="http://matildathemusical.com/"/>
 
-        <Skill title="School of Rock" 
-              info="https://schoolofrockthemusical.com/" />
+        <Project title="School of Rock" 
+                  url="https://schoolofrockthemusical.com/" />
 
-        <Skill title="Tate" 
-              info="https://www.tate.org.uk/" />
+        <Project title="Tate" 
+                url="https://www.tate.org.uk/" />
 
       </div>
       
@@ -151,11 +151,13 @@
 <script>
 
 import Skill from './components/Skill.vue'
+import Project from './components/Project.vue'
 
 export default {
   name: 'app',
   components: {
-    Skill
+    Skill,
+    Project
   },
   data () {
     return {

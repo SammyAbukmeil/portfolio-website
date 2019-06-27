@@ -7,10 +7,6 @@
         <h5 v-bind:class="{ 'dark-title': !lightTheme }" class="mb-2 font-medium">My tools of choice...</h5>
         <div class="my-10" v-for="(tool, index) in tools" :key="index">
           <p class="m-0 text-lg font-bold">{{ tool }}</p>
-          <p class="m-0 text-sm">
-            Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit 
-            amet orci. Aenean dignissim pellentesque felis.
-          </p>
         </div>
       </div>
     </div>

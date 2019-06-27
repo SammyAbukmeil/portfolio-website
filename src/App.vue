@@ -99,60 +99,25 @@
 
       <div class="skill-row flex flex-wrap">
 
-        <Skill title="HTML"
-                info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut 
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere 
-                a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor 
-                mauris sit amet orci. Aenean dignissim pellentesque felis."/>
+        <Skill title="HTML"/>
 
-        <Skill title="CSS" 
-              info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut 
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere 
-                a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor 
-                mauris sit amet orci. Aenean dignissim pellentesque felis."
-              v-bind:tools="['Sass']" />
+        <Skill title="CSS" v-bind:tools="['Sass']" />
 
       </div>
 
       <div class="skill-row flex flex-wrap">
 
-        <Skill title="JavaScript" 
-              info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut 
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere 
-                a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor 
-                mauris sit amet orci. Aenean dignissim pellentesque felis."
-              v-bind:tools="['Vue JS', 'jQuery']" />
+        <Skill title="JavaScript" v-bind:tools="['Vue JS', 'jQuery']" />
 
-        <Skill title="PHP" 
-              info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut 
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere 
-                a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor 
-                mauris sit amet orci. Aenean dignissim pellentesque felis."
-              v-bind:tools="['Laravel', 'WordPress']" />
+        <Skill title="PHP" v-bind:tools="['Laravel', 'WordPress']" />
 
       </div>
 
       <div class="skill-row flex flex-wrap">
 
-        <Skill title="Server Side" 
-              info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut 
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere 
-                a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor 
-                mauris sit amet orci. Aenean dignissim pellentesque felis."
-              v-bind:tools="['AWS', 'Docker', 'Digital Ocean']" />
+        <Skill title="Server Side" v-bind:tools="['AWS', 'Docker', 'Digital Ocean']" />
 
-        <Skill title="Tracking" 
-              info="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut 
-                turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere 
-                a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor 
-                mauris sit amet orci. Aenean dignissim pellentesque felis."
-              v-bind:tools="['AWS', 'Docker', 'Digital Ocean']" />
+        <Skill title="Tracking" v-bind:tools="['Google Tag Manager', 'Google Analytics']" />
 
       </div>
     </div>
@@ -166,23 +131,16 @@
       <div class="skill-row flex flex-wrap  ">
 
         <Skill title="Harry Potter" 
-              info="Donec nec justo eget felis facilisis fermentum. Aliquam 
-              porttitor mauris sit amet orci. Aenean dignissim pellentesque felis." />
+              info="https://www.harrypottertheplay.com/" />
 
         <Skill title="Matilda"
-                info="Donec nec justo eget felis facilisis fermentum. 
-                      Aliquam porttitor mauris sit amet orci. Aenean 
-                      dignissim pellentesque felis."/>
+                info="http://matildathemusical.com/"/>
 
         <Skill title="School of Rock" 
-              info="Donec nec justo eget felis facilisis fermentum. 
-              Aliquam porttitor mauris sit amet orci. Aenean dignissim 
-              pellentesque felis." />
+              info="https://schoolofrockthemusical.com/" />
 
         <Skill title="Tate" 
-              info="Donec nec justo eget felis facilisis fermentum. 
-              Aliquam porttitor mauris sit amet orci. Aenean dignissim 
-              pellentesque felis." />
+              info="https://www.tate.org.uk/" />
 
       </div>
       
